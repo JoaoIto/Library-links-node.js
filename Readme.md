@@ -256,3 +256,27 @@ E assim o objeto que conseguimos retornar é:
 ```
 
 ---
+
+## Teste em linha de comando (CLI)
+
+**Nosso teste em biblioteca já esta certa, porém por enquanto isso que fizemos, esta somente entre os arquivos, chamados diretamente na função. O que não é muito prático, já que só conseguimos chamar a partir desse caminho absoluto.**
+
+Para isso, faremos: **Teste de caminho dito em linha de comando!**
+
+```js
+const caminho = process.argv;
+console.log(caminho);
+```
+
+**Quando testamos esta linha de código, percebemos que ele devolve o processo de busca a partir da linha raiz do computador, até o arquivo da CLI.**
+
+ A primeira é um caminho absoluto do diretório raiz até "/bin/node", a pasta de binários do Node.js. A segunda é o caminho absoluto entre a pasta raiz e "cli.js".
+
+ E assim, entendemos que, se quisermos praticar isso a partir de um comando no terminal, só precisamos buscar diretamente no caminho do arquivo, chamado no 3° índice do array de *caminho*, deste modo:
+
+  ```js
+  import { pegaArquivo } from "./index";
+
+const caminho = process.argv;
+pegaArquivo(caminho[2])
+  ```
