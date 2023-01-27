@@ -40,25 +40,6 @@ function pegaArquivo(caminho){
 };
 */
 
-// MÉTODO 3
-
-/* Este sim. Este já é um dos métodos mais conhecidos e utilizados,
-principalmente em situações reais, onde utilizaremos uma API, para
-testes destes código, e aí sim, com await e async
-*/
-
-async function pegaArquivo(caminho){
-    try {
-        const enconding = 'utf-8';
-        const texto = await fs.promises.readFile(caminho, enconding);
-        getLinks(texto)
-    }catch(error){
-        trataErro(error);
-    }
-}
- 
-
-pegaArquivo('./textos.md');
 
 /* => REGEX expression para conseguir capturar links para cada ocorrência,
 e ainda separar devido aos textos de links, quanto ao de cada link em si
@@ -76,4 +57,21 @@ function getLinks(text){
     const capture = [...text.matchAll(regex)];
     const result = capture.map(capture => ({[capture[1]]: capture[2]}))
     console.log(result)
+}
+
+// MÉTODO 3
+
+/* Este sim. Este já é um dos métodos mais conhecidos e utilizados,
+principalmente em situações reais, onde utilizaremos uma API, para
+testes destes código, e aí sim, com await e async
+*/
+
+export async function pegaArquivo(caminho){
+    try {
+        const enconding = 'utf-8';
+        const texto = await fs.promises.readFile(caminho, enconding);
+        getLinks(texto)
+    }catch(error){
+        trataErro(error);
+    }
 }
