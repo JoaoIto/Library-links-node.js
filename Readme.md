@@ -19,24 +19,6 @@ Foi criado uma pasta *archives* com um arquivo de textos como exemplo, porém vo
 ***Have fun!***
 
 ---
-
-## Biblioteca de sintaxe: <img height="20" src="https://raw.githubusercontent.com/chalk/chalk/HEAD/media/logo.svg">
-
-**O chalk é uma biblioteca usada para highlight dentro do código, conseguindo usar métodos para diferenciar os trechos da código da estilização que quiser dentro da resposta do terminal! [npm-link](https://www.npmjs.com/package/chalk?activeTab=dependents)**
-
-### Sintaxe
-
-```jsx
-import chalk from 'chalk';
-console.log(chalk.green("Hello World"))
-
-// Resposta terminal: 
-
-/* "Hello World" */
-```
-
----
-
 ## Busca de arquivos node
 
 **A biblioteca nativa e muito bem reconhecida, até por fazer propriamente do próprio windows, é a biblioteca de *fs*. Ela utilizada para ler arquivos e caminhos de endereço dentro ou fora do seu computador. Vamos entender também os possíveis métodos para buscar o nosso arquivo**
