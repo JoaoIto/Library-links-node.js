@@ -1,6 +1,6 @@
-# Library node.js <img src="https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white"> <img src="https://img.shields.io/badge/npm-CB3837?style=for-the-badge&logo=npm&logoColor=white">
-
 <div align="center">
+
+# Library node.js <img src="https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white"> <img src="https://img.shields.io/badge/npm-CB3837?style=for-the-badge&logo=npm&logoColor=white">
 
 **Este curso esta voltado para o back-end e reconhecendo quem quer aprender um pouco mais de uma biblioteca em si e em que ela pode ajudar a servir como um trecho de código reutilizável. A biblioteca mais conhecida do JS vai ser usada aqui para exemplificar comando dentro do terminal, expressões regulares, regras dentro de uma página web, etc...**
 
