@@ -22,7 +22,7 @@ function getLinks(text) {
   const regex = /\[([^[\]]*?)\]\((https?:\/\/[^\s?#.].[^\s]*)\)/gm;
   const capture = [...text.matchAll(regex)];
   const result = capture.map((capture) => ({ [capture[1]]: capture[2] }));
-  console.log(result);
+  return result.length !== 0 ? result : chalk.red('list-links = 0');
 }
 
 /** MÉTODO 3
@@ -39,7 +39,7 @@ export async function pegaArquivo(caminho) {
   try {
     const enconding = "utf-8";
     const texto = await fs.promises.readFile(caminho, enconding);
-    getLinks(texto);
+    return getLinks(texto);
   } catch (error) {
     trataErro(error);
   }

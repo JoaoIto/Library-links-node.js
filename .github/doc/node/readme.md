@@ -73,7 +73,7 @@ const regex = /\[([^[\]]*?)\]\((https?:\/\/[^\s?#.].[^\s]*)\)/gm;
 
 **A partir daqui, se chamarmos um método que busque pelos textos a partir de nossa função, conseguimos identificar os links e nomes dentro do texto separadamente. Só que, qual método?**
 
-**Bom, se chamarmos qualquer método que busque diretamente estes partes dentro do texto a partir do regex, ele irá retornar basicamente um objeto, que não pode ser lido e devolvido diretamente. Para isso, utilizaremos um método de Array chamado de *`matchAll`*. Para motivos de expandimento, usamos o expred operator, que ele consegue transformar em acessível o nosso objeto iterável.**
+**Bom, se chamarmos qualquer método que busque diretamente estes partes dentro do texto a partir do regex, ele irá retornar basicamente um objeto, que não pode ser lido e devolvido diretamente. Para isso, utilizaremos um método de Array chamado de *`matchAll`*. Para motivos de expandimento, usamos o *[spreed operator*](https://developer.mozilla.org/en-US/docs/web/javascript/reference/operators/spread_syntax), que ele consegue transformar em acessível o nosso objeto iterável.**
 
 - ***`matchAll`*: [String.prototype.matchAll() - JavaScript | MDN (mozilla.org)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/matchAll)**
 
