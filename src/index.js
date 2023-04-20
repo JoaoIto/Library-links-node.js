@@ -6,50 +6,17 @@ function trataErro(error) {
   throw new Error(chalk.red(error.code, "Há erro na chamada!"));
 }
 
-// MÉTODO 1
-
-/* => Método mais simples, de forma do próprio JS, 
-sem nenhuma funcionalidade nova ou a mais... De forma
-"rústica" da linguagem.
+/** // => Regex function: 
+  * REGEX expression para conseguir capturar links para cada ocorrência,
+  * e ainda separar devido aos textos de links, quanto ao de cada link em si
+  * os parênteses e colchetes que o envolvem. A expressão:
+  * 
+  * @param {string} text - Captura todos os links que estão dentro do 
+  * arquivo, fazendo a função que esperamos destes links;
+  * 
+  * @returns {Object &| Array} result - retorna já a lista ou objeto de links
+  * usando o argumento regex \[([^[\]]*?)\]\((https?:\/\/[^\s?#.].[^\s]*)\);
 */
-/* function pegaArquivo(caminho){
-    const enconding = 'utf-8';
-    fs.readFile(caminho, enconding, (error, text) => {
-        if(error){
-            trataErro(error);
-        }
-    console.log(chalk.blue(text))});
-};
-*/
-
-// MÉTODO 2
-
-/* => Este método apesar de já usar 2 funcionalidades,
-ainda sim é um método bem simples e ainda sim bem eficaz, de 
-forma a contar com a verificação de erros e recebimento do 
-arquivo a ser solicitado... É de suma importância que se entenda 
-estes tipos de funções, para que entenda a mais complexa!
-*/
-
-/*
-function pegaArquivo(caminho){
-    const enconding = 'utf-8';
-    fs.promises.readFile(caminho, enconding)
-    .then((texto) => console.log(chalk.green(texto)))
-    .catch(trataErro(error));
-};
-*/
-
-/* => REGEX expression para conseguir capturar links para cada ocorrência,
-e ainda separar devido aos textos de links, quanto ao de cada link em si
-os parênteses e colchetes que o envolvem. A expressão:
-
-\[([^[\]]*?)\]\((https?:\/\/[^\s?#.].[^\s]*)\)
-
-
-*/
-
-// => Regex function:
 
 function getLinks(text) {
   const regex = /\[([^[\]]*?)\]\((https?:\/\/[^\s?#.].[^\s]*)\)/gm;
@@ -58,13 +25,16 @@ function getLinks(text) {
   console.log(result);
 }
 
-// MÉTODO 3
-
-/* Este sim. Este já é um dos métodos mais conhecidos e utilizados,
-principalmente em situações reais, onde utilizaremos uma API, para
-testes destes código, e aí sim, com await e async
-*/
-
+/** MÉTODO 3
+ * A função pega arquivo, é a principal, na qual ela faz a parte
+ * de leitura do arquivo que é colocado dentro do terminal assíncronamente
+ * usando a biblioteca comum de fs. Ainda chamando as funções secundárias, 
+ * obviamente de conseguir os links e tratar erros dentro do arquivo ou chamada
+ * no terminal;
+ * @param {string} caminho - Pega o caminho do arquivo escrito no terminal:
+ * @returns {Array<string>} - Devolve um array com a lista de arquivos que foi 
+ * chamado, logicamente já fazendo as verificações nas funções secundárias.
+ */
 export async function pegaArquivo(caminho) {
   try {
     const enconding = "utf-8";
