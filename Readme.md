@@ -4,6 +4,20 @@
 
 Nesta aplicação, construimos uma biblioteca node.js de construção e identificação, captura de links dentro de markdown a partir de index de JS.
 
+## Como usar:
+
+Com as funcionalidades da biblioteca, você consegue filtrar os arquivos que você quiser a partir do argumentos escritos diretamente do terminal. E assim, precisamos somente escrever seu caminho.
+
+Instá-le a biblioteca e rode:
+
+```js
+node ./src/cli.js <caminho do aquivo a ser rodado>
+```
+
+Foi criado uma pasta *archives* com um arquivo de textos como exemplo, porém você pode adicionar qualquer arquivo, e assim só especificar seu caminho, escrito logo após rodar o comando do código em cli.js.
+
+***Have fun!***
+
 ---
 
 ## Biblioteca de sintaxe: <img height="20" src="https://raw.githubusercontent.com/chalk/chalk/HEAD/media/logo.svg">
