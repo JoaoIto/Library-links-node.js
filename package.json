@@ -19,6 +19,7 @@
     },
     "homepage": "https://github.com/alura-cursos/2708-node-lib-md#readme",
     "dependencies": {
-        "chalk": "^5.1.2"
+        "chalk": "^5.1.2",
+        "fs": "^0.0.1-security"
     }
 }

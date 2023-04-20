@@ -1,9 +1,9 @@
-import fs from 'fs';
-import chalk from 'chalk';
+import fs from "fs";
+import chalk from "chalk";
 
-function trataErro(error){
-    console.log(error)
-    throw new Error(chalk.red(error.code, "Há erro na chamada!"))
+function trataErro(error) {
+  console.log(error);
+  throw new Error(chalk.red(error.code, "Há erro na chamada!"));
 }
 
 // MÉTODO 1
@@ -40,7 +40,6 @@ function pegaArquivo(caminho){
 };
 */
 
-
 /* => REGEX expression para conseguir capturar links para cada ocorrência,
 e ainda separar devido aos textos de links, quanto ao de cada link em si
 os parênteses e colchetes que o envolvem. A expressão:
@@ -50,13 +49,13 @@ os parênteses e colchetes que o envolvem. A expressão:
 
 */
 
-// => Regex function: 
+// => Regex function:
 
-function getLinks(text){
-    const regex = /\[([^[\]]*?)\]\((https?:\/\/[^\s?#.].[^\s]*)\)/gm;
-    const capture = [...text.matchAll(regex)];
-    const result = capture.map(capture => ({[capture[1]]: capture[2]}))
-    console.log(result)
+function getLinks(text) {
+  const regex = /\[([^[\]]*?)\]\((https?:\/\/[^\s?#.].[^\s]*)\)/gm;
+  const capture = [...text.matchAll(regex)];
+  const result = capture.map((capture) => ({ [capture[1]]: capture[2] }));
+  console.log(result);
 }
 
 // MÉTODO 3
@@ -66,12 +65,12 @@ principalmente em situações reais, onde utilizaremos uma API, para
 testes destes código, e aí sim, com await e async
 */
 
-export async function pegaArquivo(caminho){
-    try {
-        const enconding = 'utf-8';
-        const texto = await fs.promises.readFile(caminho, enconding);
-        getLinks(texto)
-    }catch(error){
-        trataErro(error);
-    }
+export async function pegaArquivo(caminho) {
+  try {
+    const enconding = "utf-8";
+    const texto = await fs.promises.readFile(caminho, enconding);
+    getLinks(texto);
+  } catch (error) {
+    trataErro(error);
+  }
 }
