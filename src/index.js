@@ -55,7 +55,7 @@ function getLinks(text) {
   const regex = /\[([^[\]]*?)\]\((https?:\/\/[^\s?#.].[^\s]*)\)/gm;
   const capture = [...text.matchAll(regex)];
   const result = capture.map((capture) => ({ [capture[1]]: capture[2] }));
-  return result
+  return result.length !== 0 ? result : chalk.red('list-links = 0');
 }
 
 // MÉTODO 3
