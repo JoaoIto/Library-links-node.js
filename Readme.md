@@ -10,7 +10,7 @@ Nesta aplicação, construimos uma biblioteca node.js de construção e identifi
 
 Com as funcionalidades da biblioteca, você consegue filtrar os arquivos que você quiser a partir do argumentos escritos diretamente do terminal. E assim, precisamos somente escrever seu caminho.
 
-Instá-le a biblioteca e rode:
+Instale a biblioteca e rode:
 
 ```node
 npm run cli
