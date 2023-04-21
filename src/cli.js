@@ -1,7 +1,7 @@
 import chalk from "chalk";
 import fs from "fs";
 import { pegaArquivo } from "./index.js";
-import { listLinks } from "./httpValidity.js";
+import { listLinks } from "./links.js";
 
 const caminho = process.argv;
 
