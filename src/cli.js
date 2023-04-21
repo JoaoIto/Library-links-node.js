@@ -12,7 +12,7 @@ async function processar(argumentos){
     const caminho = argumentos[2];
 
     if(fs.lstatSync(caminho).isFile()){
-        const result = await pegaArquivo(argumentos[2]);
+        const result = pegaArquivo(argumentos[2]);
         imprimeList(result);
     }else if(fs.lstatSync(caminho).isDirectory()){
         const arquivos = await fs.promises.readdir(caminho);
