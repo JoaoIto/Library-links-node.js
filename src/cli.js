@@ -5,24 +5,22 @@ import { listLinks } from "./httpValidity.js";
 
 const caminho = process.argv;
 
-function imprimeList(valide, result) {
+function imprimeList(links, result) {
 
-    if(valide){
-        console.log(
-          chalk.magenta("lista validada!"),
-          chalk.yellow("lista-links: "),
-          listLinks(result)
-        );
-    }else{
-        console.log(
-            chalk.yellow("lista-links: "), result);
+    if (links) {
+      console.log(
+        chalk.yellow("lista-links: "),
+        listLinks(result)
+      );
+    } else {
+      console.log(chalk.yellow("lista-links: "), result);
     }
 
 }
 
 async function processar(argumentos) {
   const caminho = argumentos[2];
-  const valida = argumentos[3] === '--links';
+  const links = argumentos[3] === '--links';
 
   try {
     fs.lstatSync(caminho);
@@ -34,13 +32,13 @@ async function processar(argumentos) {
   }
   if (fs.lstatSync(caminho).isFile()) {
     const result = pegaArquivo(argumentos[2]);
-    imprimeList(valida, result);
+    imprimeList(links, result);
   } else if (fs.lstatSync(caminho).isDirectory()) {
     const arquivos = await fs.promises.readdir(caminho);
     arquivos.forEach(async (nomeFile) => {
       const list = await pegaArquivo(`${caminho}/${nomeFile}`);
       console.log(chalk.blue(`${caminho}/${nomeFile}`));
-      imprimeList(valida, list);
+      imprimeList(links, list);
     });
     console.log(arquivos);
   }
