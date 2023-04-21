@@ -2,8 +2,44 @@
 
 **A biblioteca nativa e muito bem reconhecida, até por fazer propriamente do próprio windows, é a biblioteca de *fs*. Ela utilizada para ler arquivos e caminhos de endereço dentro ou fora do seu computador. Vamos entender também os possíveis métodos para buscar o nosso arquivo**
 
-[Buscando arquivo](https://www.notion.so/Buscando-arquivo-158da5c1a2ef4b52bd1ba8d772284b46)
+```js
+[ 'textoCopy.md', 'textos.md' ]
+./archives/textos.md
+lista-links:  [
+  {
+    FileList: 'https://developer.mozilla.org/pt-BR/docs/Web/API/FileList'
+  },
+  {
+    '<input>': 'https://developer.mozilla.org/pt-BR/docs/Web/HTML/Element/Input'
+  },
+  {
+    DataTransfer: 'https://developer.mozilla.org/pt-BR/docs/Web/API/DataTransfer'
+  },
+  {
+    HTMLCanvasElement: 'https://developer.mozilla.org/pt-BR/docs/Web/API/HTMLCanvasElement'
+  },
+  {
+    'Implementation notes': 'https://developer.mozilla.org/pt-BR/docs/Web/API/File#implementation_notes'
+  }
+]
+./archives/textoCopy.md
+lista-links:  [
+  {    FileList: 'https://developer.mozilla.org/pt-BR/docs/Web/API/FileList' 
+  },  {
+    '<input>': 'https://developer.mozilla.org/pt-BR/docs/Web/HTML/Element/Input'
+  },  {
+    DataTransfer: 'https://developer.mozilla.org/pt-BR/docs/Web/API/DataTransfer'
+  },  {
+    HTMLCanvasElement: 'https://developer.mozilla.org/pt-BR/docs/Web/API/HTMLCanvasElement'
+  },  {
+    'Implementation notes': 'https://developer.mozilla.org/pt-BR/docs/Web/API/File#implementation_notes'
+  },
+  { 'Teste de retorno 400': 'https://httpstat.us/404' },
+  { 'gatinho salsicha': 'http://gatinhosalsicha.com.br/' }
+]
+```
 
+---
 ### Trecho base
 
 ```jsx
