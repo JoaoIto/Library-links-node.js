@@ -1,7 +1,7 @@
 import chalk from "chalk";
 import fs from "fs";
 import { pegaArquivo } from "./index.js";
-import { listaValidada } from "./httpValidity.js";
+import { listLinks } from "./httpValidity.js";
 
 const caminho = process.argv;
 
@@ -9,9 +9,9 @@ function imprimeList(valide, result) {
 
     if(valide){
         console.log(
-            chalk.magenta("lista validada!"),
-            chalk.yellow("lista-links: "),
-            listaValidada(result)
+          chalk.magenta("lista validada!"),
+          chalk.yellow("lista-links: "),
+          listLinks(result)
         );
     }else{
         console.log(
@@ -22,7 +22,7 @@ function imprimeList(valide, result) {
 
 async function processar(argumentos) {
   const caminho = argumentos[2];
-  const valida = argumentos[3] === '--valida';
+  const valida = argumentos[3] === '--links';
 
   try {
     fs.lstatSync(caminho);
