@@ -10,9 +10,16 @@ function imprimeList(result){
 
 async function processar(argumentos){
     const caminho = argumentos[2];
-
+    try{
+        fs.lstatSync(caminho);
+    }catch(error){
+        if(error.code === 'ENOENT'){
+            console.log(chalk.red("Arquivo não existe!"));
+            return;
+        }
+    }
     if(fs.lstatSync(caminho).isFile()){
-        const result = await pegaArquivo(argumentos[2]);
+        const result = pegaArquivo(argumentos[2]);
         imprimeList(result);
     }else if(fs.lstatSync(caminho).isDirectory()){
         const arquivos = await fs.promises.readdir(caminho);
