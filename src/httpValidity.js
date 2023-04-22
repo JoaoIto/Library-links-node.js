@@ -11,8 +11,7 @@ async function checkStatus(arrUrls) {
 }
 
 export async function valideLinks(arrLinks) {
-  const links = listLinks(arrLinks);
-  const status = await checkStatus(links);
+  const status = await checkStatus(arrLinks);
   return status;
 }
 

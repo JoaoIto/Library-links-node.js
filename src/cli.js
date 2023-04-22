@@ -1,31 +1,19 @@
 import chalk from "chalk";
 import fs from "fs";
-import {
-  pegaArquivo
-} from "./index.js";
-import {
-  listLinks
-} from "./links.js";
-import {
-  valideLinks
-} from "./httpValidity.js";
+import { pegaArquivo } from "./index.js";
+import { listLinks } from "./links.js";
+import { valideLinks } from "./httpValidity.js";
 
 const caminho = process.argv;
 
 async function imprimeList(valide, links, result) {
   if (valide === true) {
     const linksV = listLinks(result);
-    console.log(
-      chalk.magenta("lista validada! "), 
-      await valideLinks(linksV));
+    console.log(chalk.magenta("lista validada! "), await valideLinks(linksV));
   } else if (links === true) {
-    console.log(
-      chalk.yellow("lista-links: "), 
-      listLinks(result));
+    console.log(chalk.yellow("lista-links: "), listLinks(result));
   } else {
-    console.log(
-      chalk.yellow("lista-links: "), 
-      result);
+    console.log(chalk.yellow("lista-links: "), result);
   }
 }
 
