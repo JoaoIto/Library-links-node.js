@@ -3,26 +3,6 @@
 > node ./src/cli.js ./archives
 
 [ 'textoCopy.md', 'textos.md' ]
-./archives/textoCopy.md
-lista-links:  [
-  {
-    FileList: 'https://developer.mozilla.org/pt-BR/docs/Web/API/FileList'
-  },
-  {
-    '<input>': 'https://developer.mozilla.org/pt-BR/docs/Web/HTML/Element/Input'
-  },
-  {
-    DataTransfer: 'https://developer.mozilla.org/pt-BR/docs/Web/API/DataTransfer'
-  },
-  {
-    HTMLCanvasElement: 'https://developer.mozilla.org/pt-BR/docs/Web/API/HTMLCanvasElement'
-  },
-  {
-    'Implementation notes': 'https://developer.mozilla.org/pt-BR/docs/Web/API/File#implementation_notes'
-  },
-  { 'Teste de retorno 400': 'https://httpstat.us/404' },
-  { 'gatinho salsicha': 'http://gatinhosalsicha.com.br/' }
-]
 ./archives/textos.md
 lista-links:  [
   {
@@ -39,7 +19,23 @@ lista-links:  [
   },
   {
     'Implementation notes': 'https://developer.mozilla.org/pt-BR/docs/Web/API/File#implementation_notes'
+  }
+]
+./archives/textoCopy.md
+lista-links:  [
+  {
+    FileList: 'https://developer.mozilla.org/pt-BR/docs/Web/API/FileList'
   },
-  { 'Teste de retorno 400': 'https://httpstat.us/404' },
-  { 'gatinho salsicha': 'http://gatinhosalsicha.com.br/' }
+  {
+    '<input>': 'https://developer.mozilla.org/pt-BR/docs/Web/HTML/Element/Input'
+  },
+  {
+    DataTransfer: 'https://developer.mozilla.org/pt-BR/docs/Web/API/DataTransfer'
+  },
+  {
+    HTMLCanvasElement: 'https://developer.mozilla.org/pt-BR/docs/Web/API/HTMLCanvasElement'
+  },
+  {
+    'Implementation notes': 'https://developer.mozilla.org/pt-BR/docs/Web/API/File#implementation_notes'
+  }
 ]
