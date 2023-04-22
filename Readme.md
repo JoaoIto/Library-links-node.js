@@ -1,23 +1,24 @@
 <div align="center">
 
-# Library node.js <img src="https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white"> <img src="https://img.shields.io/badge/npm-CB3837?style=for-the-badge&logo=npm&logoColor=white">
+# Release v1.4.8 <img src="https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white"> <img src="https://img.shields.io/badge/npm-CB3837?style=for-the-badge&logo=npm&logoColor=white"> <img src="https://img.shields.io/badge/MDN_Web_Docs-black?style=for-the-badge&logo=mdnwebdocs&logoColor=white">
 
-**Este projeto esta voltado para o back-end e reconhecendo quem quer aprender um pouco mais de uma biblioteca em si e em que ela pode ajudar a servir como um trecho de código reutilizável. A biblioteca mais conhecida do JS vai ser usada aqui para exemplificar comando dentro do terminal, expressões regulares, regras dentro de uma página web, etc...**
+**Version for publish a lib in npm global!**
 
-Nesta aplicação, construimos uma biblioteca node.js de construção e identificação, captura de links dentro de markdown a partir de index de JS.
+In this application, we build a node.js construction and identification library, capturing links within markdown from JS index in result console!
 
-## **Como usar:**
+## Feactures
 
-Com as funcionalidades da biblioteca, você consegue filtrar os arquivos que você quiser a partir do argumentos escritos diretamente do terminal. E assim, precisamos somente escrever seu caminho.
+You can insert a marckdow archive in folder archives lib, and when you run a console, `npm run cli` you can return in console, a obj list a links marckdow archives! Because in a regex function indentify the artchives!
 
-Instale a biblioteca e rode:
+## Commands
 
-```node
-npm run cli
-```
+</div>
 
-Foi criado uma pasta *archives* com um arquivo de textos como exemplo, porém você pode adicionar qualquer arquivo, e assim só especificar seu caminho, escrito logo após rodar o comando do código em cli.js.
+- ***`npm run cli`***: Can return a object complete with a links and keys;
+- ***`npm run cli:links`***: return a arr with links in a archives;
+- ***`npm run cli:v-links`*** return a complete obj arr, with a codes urls, status code and errors code in a links;
+
+<div align="center">
 
 ***Have fun!***
-
 ---
