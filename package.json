@@ -1,28 +1,33 @@
 {
-    "name": "links-valid",
-    "version": "1.4.8",
-    "description": "",
-    "main": "index.js",
-    "type": "module",
-    "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1",
-        "cli": "node ./src/cli.js ./archives",
-        "cli:links": "node ./src/cli.js ./archives --links",
-        "cli:v-links": "node ./src/cli.js ./archives --valida"
-    },
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/alura-cursos/2708-node-lib-md.git"
-    },
-    "keywords": [],
-    "author": "",
-    "license": "ISC",
-    "bugs": {
-        "url": "https://github.com/alura-cursos/2708-node-lib-md/issues"
-    },
-    "homepage": "https://github.com/alura-cursos/2708-node-lib-md#readme",
-    "dependencies": {
-        "chalk": "^5.1.2",
-        "fs": "^0.0.1-security"
-    }
+  "name": "links-valid",
+  "version": "1.4.8",
+  "description": "A lib for indetifier, read and resolve obj with links with 200 or 404 codes, return a valid arr links!",
+  "homepage": "https://github.com/JoaoIto/Library-links-node.js",
+  "bugs": {
+    "url": "https://github.com/JoaoIto/Library-links-node.js/tree/develop",
+    "email": "joaovictorpfr@gmail.com"
+  },
+  "bin": {
+   "links-valid": "./cli.js"
+ },
+  "preferGlobal": true,
+  "main": "cli.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "cli": "node ./src/cli.js ./archives",
+    "cli:links": "node ./src/cli.js ./archives --links",
+    "cli:v-links": "node ./src/cli.js ./archives --valida"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alura-cursos/2708-node-lib-md.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chalk": "^5.1.2",
+    "fs": "^0.0.1-security"
+  }
 }
